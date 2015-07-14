@@ -1,4 +1,4 @@
-var React = require('react'),
+var React = require('react/addons'),
     TodoItem = require('./TodoItem.react');
 
 var TodoList = React.createClass({

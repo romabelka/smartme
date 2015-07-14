@@ -1,7 +1,8 @@
-var React = require('react'),
+var React = require('react/addons'),
     todoActions = require('../actions/todoActions');
 
 var TodoForm = React.createClass({
+    mixins: [React.addons.LinkedStateMixin],
     getInitialState: function () {
         return {
             text: ''
@@ -10,15 +11,10 @@ var TodoForm = React.createClass({
     render: function() {
         return (
             <form onSubmit={this.addTodo}>
-                <input value={this.state.text} onChange={this.handleChange} placeholder="add new todo..."/>
+                <input valueLink={this.linkState('text')} placeholder="add new todo..."/>
                 <input type="submit"/>
             </form>
         )
-    },
-    handleChange: function (ev) {
-        this.setState({
-            text: ev.target.value
-        })
     },
     addTodo: function (ev) {
         ev.preventDefault();
