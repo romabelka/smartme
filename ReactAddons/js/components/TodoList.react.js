@@ -1,5 +1,6 @@
 var React = require('react/addons'),
-    TodoItem = require('./TodoItem.react');
+    TodoItem = require('./TodoItem.react'),
+    CSSTransitionGroup = React.addons.CSSTransitionGroup;
 
 var TodoList = React.createClass({
     render: function() {
@@ -7,9 +8,9 @@ var TodoList = React.createClass({
             return <li key={todo.id}><TodoItem todo={todo}/></li>
         });
         return (
-            <ul>
+            <CSSTransitionGroup transitionName="list" component="ul">
                 {todoItems}
-            </ul>
+            </CSSTransitionGroup>
         )
     }
 });
