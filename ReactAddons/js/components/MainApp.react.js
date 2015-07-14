@@ -1,5 +1,6 @@
 var React = require('react'),
     todoStore = require('../stores/TodoStore'),
+    TodoForm = require('./TodoForm.react'),
     TodoList = require('./TodoList.react');
 
 var MainApp = React.createClass({
@@ -22,7 +23,10 @@ var MainApp = React.createClass({
     },
     render: function() {
         return (
-            <TodoList todos={this.state.todos} />
+            <div>
+                <TodoForm />
+                <TodoList todos={this.state.todos} />
+            </div>
         )
     }
 });

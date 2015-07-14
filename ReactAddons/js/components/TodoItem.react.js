@@ -1,4 +1,5 @@
-var React = require('react');
+var React = require('react'),
+    todoActions = require('../actions/todoActions');
 
 var TodoItem = React.createClass({
     render: function() {
@@ -8,6 +9,7 @@ var TodoItem = React.createClass({
     },
     handleClick: function (ev) {
         ev.preventDefault();
+        todoActions.deleteTodo(this.props.todo.id);
     }
 });
 

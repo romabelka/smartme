@@ -9,5 +9,13 @@ module.exports = {
                 text: text
             }
         });
+    },
+    deleteTodo: function (id) {
+        AppDispatcher.dispatch({
+            actionType: actionTypes.DELETE_TODO,
+            data: {
+                id: id
+            }
+        });
     }
 };
