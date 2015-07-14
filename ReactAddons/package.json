@@ -19,8 +19,7 @@
   },
   "browserify": {
     "transform": [
-      "reactify",
-      "envify"
+      "reactify"
     ]
   }
 }
