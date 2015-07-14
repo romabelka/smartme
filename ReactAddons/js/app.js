@@ -1,5 +1,4 @@
 var React = require('react'),
-    todos = require('./mocks'),
-    TodoList = require('./components/TodoList.react');
+    MainApp = require('./components/MainApp.react');
 
-React.render(<TodoList todos={todos} />, document.getElementById('container'));
+React.render(<MainApp />, document.getElementById('container'));

@@ -4,7 +4,7 @@ var React = require('react'),
 var TodoList = React.createClass({
     render: function() {
         var todoItems = this.props.todos.map(function (todo) {
-            return <li><TodoItem todo={todo}/></li>
+            return <li key={todo.id}><TodoItem todo={todo}/></li>
         });
         return (
             <ul>
@@ -14,4 +14,4 @@ var TodoList = React.createClass({
     }
 });
 
-module.exports = TodoList
+module.exports = TodoList;
