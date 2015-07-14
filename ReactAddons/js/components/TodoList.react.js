@@ -8,7 +8,7 @@ var TodoList = React.createClass({
             return <li key={todo.id}><TodoItem todo={todo}/></li>
         });
         return (
-            <CSSTransitionGroup transitionName="list" component="ul">
+            <CSSTransitionGroup transitionName="list" component="ul" transitionAppear={true}>
                 {todoItems}
             </CSSTransitionGroup>
         )

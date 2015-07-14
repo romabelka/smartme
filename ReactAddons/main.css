@@ -1,19 +1,19 @@
 .list-enter {
-    opacity: 0.01;
-    transition: opacity .7s ease-in;
+    background-color: #00A000;
+    transition: background-color .3s ease-in;
 }
 
 .list-enter.list-enter-active {
-    opacity: 1;
+    background-color: white;
 }
 
 .list-leave {
-    opacity: 1;
-    transition: opacity .7s ease-in;
+    background-color: white;
 }
 
 .list-leave.list-leave-active {
-    opacity: 0.01;
+    background-color: red;
+    transition: background-color .3s ease-in;
 }
 
 .list-appear {
