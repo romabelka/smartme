@@ -1,0 +1,26 @@
+.list-enter {
+    background-color: #00A000;
+    transition: background-color .3s ease-in;
+}
+
+.list-enter.list-enter-active {
+    background-color: white;
+}
+
+.list-leave {
+    background-color: white;
+}
+
+.list-leave.list-leave-active {
+    background-color: red;
+    transition: background-color .3s ease-in;
+}
+
+.list-appear {
+    opacity: 0.01;
+    transition: opacity 1s ease-in;
+}
+
+.list-appear.list-appear-active {
+    opacity: 1;
+}
