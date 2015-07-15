@@ -4,7 +4,11 @@ var React = require('react/addons'),
 
 var TodoItem = React.createClass({
     propTypes: {
-        todo: React.PropTypes.instanceOf(Todo)
+//        todo: React.PropTypes.instanceOf(Todo)
+        todo: React.PropTypes.shape({
+            text: React.PropTypes.string.isRequired,
+            estimate: React.PropTypes.number
+        }).isRequired
     },
     render: function() {
         return (
