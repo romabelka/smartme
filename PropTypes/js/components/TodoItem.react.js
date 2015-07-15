@@ -3,6 +3,9 @@ var React = require('react/addons'),
     todoActions = require('../actions/todoActions');
 
 var TodoItem = React.createClass({
+    propTypes: {
+        todo: React.PropTypes.instanceOf(Todo)
+    },
     render: function() {
         return (
             <a href="#" onClick={this.handleClick}>{this.props.todo.text}</a>

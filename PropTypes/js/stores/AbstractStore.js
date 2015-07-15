@@ -3,8 +3,7 @@ var assign = require('object-assign'),
     CHANGE_EVENT = 'change';
 
 function Store() {
-    var elements = [],
-        curId = 1;
+    var elements = [];
     this.getAll = function() {
         return elements;
     };
@@ -16,8 +15,7 @@ function Store() {
     };
 
     this.add = function(element) {
-        elements.push(assign({id: curId}, element));
-        curId ++
+        elements.push(element);
     };
 
     this.delete = function (id) {
