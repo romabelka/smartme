@@ -1,11 +1,14 @@
 module.exports = [
     {
-        text: 'Make presentation'
+        text: 'Make presentation',
+        tag: 'work'
     },
     {
-        text: 'clean my room'
+        text: 'clean my room',
+        tag: 'home'
     },
     {
-        text: 'make some researches'
+        text: 'make some researches',
+        tag: 'work'
     }
 ];

@@ -8,12 +8,12 @@ var Store = require('./AbstractStore'),
 function TodoStore() {
     Store.apply(this, arguments);
     mocks.forEach(function (todo) {
-        this.createAndAdd(todo.text)
+        this.createAndAdd(todo)
     }.bind(this));
     this.dispatchToken = AppDispatcher.register(function(action) {
         switch (action.actionType) {
             case actionTypes.ADD_TODO:
-                todoStore.createAndAdd(action.data.text);
+                todoStore.createAndAdd(action.data);
                 todoStore.emitChange();
                 break;
             case actionTypes.DELETE_TODO:
@@ -25,8 +25,8 @@ function TodoStore() {
 }
 
 TodoStore.prototype = assign(Object.create(Store.prototype), {
-    createAndAdd: function (text) {
-        this.add(new Todo(text))
+    createAndAdd: function (data) {
+        this.add(new Todo(data))
     }
     //some additional functionality
 });
