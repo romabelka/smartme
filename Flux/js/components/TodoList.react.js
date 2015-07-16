@@ -1,6 +1,5 @@
-var React = require('react/addons'),
-    TodoItem = require('./TodoItem.react'),
-    CSSTransitionGroup = React.addons.CSSTransitionGroup;
+var React = require('react'),
+    TodoItem = require('./TodoItem.react');
 
 var TodoList = React.createClass({
     render: function() {

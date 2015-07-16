@@ -1,4 +1,4 @@
-var React = require('react/addons'),
+var React = require('react'),
     todoStore = require('../stores/TodoStore'),
     TodoForm = require('./TodoForm.react'),
     TodoList = require('./TodoList.react');

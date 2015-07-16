@@ -1,4 +1,4 @@
-var React = require('react/addons'),
+var React = require('react'),
     todoActions = require('../actions/todoActions');
 
 var TodoForm = React.createClass({
